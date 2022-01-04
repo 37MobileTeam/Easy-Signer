@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16F26A70174CDD949E4E7295 /* Pods_Easy_Signer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE79DF42C0F00B6F4503D72 /* Pods_Easy_Signer.framework */; };
+		7C2A600F2780C52400F5784A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A600E2780C52400F5784A /* MBProgressHUD.m */; };
+		7C2A60112780C61400F5784A /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2A60102780C61400F5784A /* HUD.swift */; };
+		7C4FBA5F276F003C001F89B2 /* Resign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FBA5E276F003C001F89B2 /* Resign.swift */; };
+		7C4FBA61276F130B001F89B2 /* TaskCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FBA60276F130B001F89B2 /* TaskCenter.swift */; };
+		7C4FBA6D276F7CE2001F89B2 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 7C4FBA6C276F7CE2001F89B2 /* Resources */; };
+		7C4FBA6F2770B12D001F89B2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FBA6E2770B12D001F89B2 /* Profile.swift */; };
+		7CA7E1672740C62A00E167A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1662740C62A00E167A1 /* AppDelegate.swift */; };
+		7CA7E16B2740C62B00E167A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7E16A2740C62B00E167A1 /* Assets.xcassets */; };
+		7CA7E1792740C7CA00E167A1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1782740C7CA00E167A1 /* main.swift */; };
+		7CA7E1812740C9BE00E167A1 /* BaseWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1802740C9BE00E167A1 /* BaseWindow.swift */; };
+		7CA7E1832740C9ED00E167A1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1822740C9ED00E167A1 /* BaseViewController.swift */; };
+		7CA7E1872740CA5100E167A1 /* ResignWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1862740CA5100E167A1 /* ResignWindow.swift */; };
+		7CA7E1892740CBB900E167A1 /* ResignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1882740CBB900E167A1 /* ResignViewController.swift */; };
+		7CB8FD942778BCAC006514E4 /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8FD932778BCAC006514E4 /* LoggerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		193737736E4788E8AA54FF89 /* Pods-Easy-Signer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-Signer.debug.xcconfig"; path = "Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2A600C2780C52400F5784A /* Easy-Signer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Easy-Signer-Bridging-Header.h"; sourceTree = "<group>"; };
+		7C2A600D2780C52400F5784A /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		7C2A600E2780C52400F5784A /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		7C2A60102780C61400F5784A /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		7C4FBA5E276F003C001F89B2 /* Resign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resign.swift; sourceTree = "<group>"; };
+		7C4FBA60276F130B001F89B2 /* TaskCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCenter.swift; sourceTree = "<group>"; };
+		7C4FBA6C276F7CE2001F89B2 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		7C4FBA6E2770B12D001F89B2 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7CA7E1632740C62A00E167A1 /* Easy-Signer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy-Signer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA7E1662740C62A00E167A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CA7E16A2740C62B00E167A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CA7E16F2740C62B00E167A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CA7E1702740C62B00E167A1 /* Easy-Signer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Easy-Signer.entitlements"; sourceTree = "<group>"; };
+		7CA7E1782740C7CA00E167A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7CA7E1802740C9BE00E167A1 /* BaseWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindow.swift; sourceTree = "<group>"; };
+		7CA7E1822740C9ED00E167A1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7CA7E1862740CA5100E167A1 /* ResignWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignWindow.swift; sourceTree = "<group>"; };
+		7CA7E1882740CBB900E167A1 /* ResignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignViewController.swift; sourceTree = "<group>"; };
+		7CB8FD932778BCAC006514E4 /* LoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerView.swift; sourceTree = "<group>"; };
+		8CE3B8ADAA66E0EF70270660 /* Pods-iTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTools.debug.xcconfig"; path = "Target Support Files/Pods-iTools/Pods-iTools.debug.xcconfig"; sourceTree = "<group>"; };
+		9FE79DF42C0F00B6F4503D72 /* Pods_Easy_Signer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easy_Signer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CEA569347EB641EC101D2C /* Pods-Easy-Signer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-Signer.release.xcconfig"; path = "Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer.release.xcconfig"; sourceTree = "<group>"; };
+		B84BBE2B5DFDFAB5814F10EA /* Pods-iTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTools.release.xcconfig"; path = "Target Support Files/Pods-iTools/Pods-iTools.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CA7E1602740C62A00E167A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F26A70174CDD949E4E7295 /* Pods_Easy_Signer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C2A600A2780C4D100F5784A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7C2A600B2780C51100F5784A /* MBProgressHUD */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		7C2A600B2780C51100F5784A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7C2A600D2780C52400F5784A /* MBProgressHUD.h */,
+				7C2A600E2780C52400F5784A /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		7C4FBA65276F7B9A001F89B2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7C2A600A2780C4D100F5784A /* Vendor */,
+				7C4FBA6B276F7C46001F89B2 /* Windows */,
+				7C4FBA6A276F7C30001F89B2 /* ViewControllers */,
+				7C4FBA69276F7C1D001F89B2 /* Views */,
+				7C4FBA67276F7BED001F89B2 /* Helper */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7C4FBA67276F7BED001F89B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FBA5E276F003C001F89B2 /* Resign.swift */,
+				7C4FBA60276F130B001F89B2 /* TaskCenter.swift */,
+				7C4FBA6E2770B12D001F89B2 /* Profile.swift */,
+				7C2A60102780C61400F5784A /* HUD.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7C4FBA69276F7C1D001F89B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CB8FD932778BCAC006514E4 /* LoggerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C4FBA6A276F7C30001F89B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E1822740C9ED00E167A1 /* BaseViewController.swift */,
+				7CA7E1882740CBB900E167A1 /* ResignViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7C4FBA6B276F7C46001F89B2 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E1802740C9BE00E167A1 /* BaseWindow.swift */,
+				7CA7E1862740CA5100E167A1 /* ResignWindow.swift */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		7CA7E15A2740C62A00E167A1 = {
+			isa = PBXGroup;
+			children = (
+				7CA7E1652740C62A00E167A1 /* Easy-Signer */,
+				7CA7E1642740C62A00E167A1 /* Products */,
+				AA3751BCDA22C8FD7D2661CC /* Pods */,
+				987167D6F8BF8070FDC54FFE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7CA7E1642740C62A00E167A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E1632740C62A00E167A1 /* Easy-Signer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CA7E1652740C62A00E167A1 /* Easy-Signer */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E1782740C7CA00E167A1 /* main.swift */,
+				7CA7E1662740C62A00E167A1 /* AppDelegate.swift */,
+				7CA7E16A2740C62B00E167A1 /* Assets.xcassets */,
+				7CA7E16F2740C62B00E167A1 /* Info.plist */,
+				7CA7E1702740C62B00E167A1 /* Easy-Signer.entitlements */,
+				7C2A600C2780C52400F5784A /* Easy-Signer-Bridging-Header.h */,
+				7C4FBA65276F7B9A001F89B2 /* Classes */,
+				7C4FBA6C276F7CE2001F89B2 /* Resources */,
+			);
+			path = "Easy-Signer";
+			sourceTree = "<group>";
+		};
+		987167D6F8BF8070FDC54FFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FE79DF42C0F00B6F4503D72 /* Pods_Easy_Signer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA3751BCDA22C8FD7D2661CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CE3B8ADAA66E0EF70270660 /* Pods-iTools.debug.xcconfig */,
+				B84BBE2B5DFDFAB5814F10EA /* Pods-iTools.release.xcconfig */,
+				193737736E4788E8AA54FF89 /* Pods-Easy-Signer.debug.xcconfig */,
+				A1CEA569347EB641EC101D2C /* Pods-Easy-Signer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CA7E1622740C62A00E167A1 /* Easy-Signer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CA7E1732740C62B00E167A1 /* Build configuration list for PBXNativeTarget "Easy-Signer" */;
+			buildPhases = (
+				10ACFB26CE9E86B0FACC64D1 /* [CP] Check Pods Manifest.lock */,
+				7CA7E15F2740C62A00E167A1 /* Sources */,
+				7CA7E1602740C62A00E167A1 /* Frameworks */,
+				7CA7E1612740C62A00E167A1 /* Resources */,
+				80A600F88FB01764D1CDE4F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Easy-Signer";
+			productName = iTools;
+			productReference = 7CA7E1632740C62A00E167A1 /* Easy-Signer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CA7E15B2740C62A00E167A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					7CA7E1622740C62A00E167A1 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1300;
+					};
+				};
+			};
+			buildConfigurationList = 7CA7E15E2740C62A00E167A1 /* Build configuration list for PBXProject "Easy-Signer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CA7E15A2740C62A00E167A1;
+			productRefGroup = 7CA7E1642740C62A00E167A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CA7E1622740C62A00E167A1 /* Easy-Signer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CA7E1612740C62A00E167A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4FBA6D276F7CE2001F89B2 /* Resources in Resources */,
+				7CA7E16B2740C62B00E167A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10ACFB26CE9E86B0FACC64D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easy-Signer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80A600F88FB01764D1CDE4F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CA7E15F2740C62A00E167A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4FBA5F276F003C001F89B2 /* Resign.swift in Sources */,
+				7CA7E1832740C9ED00E167A1 /* BaseViewController.swift in Sources */,
+				7CA7E1872740CA5100E167A1 /* ResignWindow.swift in Sources */,
+				7CA7E1672740C62A00E167A1 /* AppDelegate.swift in Sources */,
+				7C2A600F2780C52400F5784A /* MBProgressHUD.m in Sources */,
+				7CB8FD942778BCAC006514E4 /* LoggerView.swift in Sources */,
+				7CA7E1812740C9BE00E167A1 /* BaseWindow.swift in Sources */,
+				7CA7E1892740CBB900E167A1 /* ResignViewController.swift in Sources */,
+				7C4FBA61276F130B001F89B2 /* TaskCenter.swift in Sources */,
+				7C2A60112780C61400F5784A /* HUD.swift in Sources */,
+				7C4FBA6F2770B12D001F89B2 /* Profile.swift in Sources */,
+				7CA7E1792740C7CA00E167A1 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7CA7E1712740C62B00E167A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CA7E1722740C62B00E167A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7CA7E1742740C62B00E167A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193737736E4788E8AA54FF89 /* Pods-Easy-Signer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Easy-Signer/Easy-Signer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Easy-Signer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.37ios.Easy-Signer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Easy-Signer/Easy-Signer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7CA7E1752740C62B00E167A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1CEA569347EB641EC101D2C /* Pods-Easy-Signer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Easy-Signer/Easy-Signer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Easy-Signer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.37ios.Easy-Signer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Easy-Signer/Easy-Signer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CA7E15E2740C62A00E167A1 /* Build configuration list for PBXProject "Easy-Signer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA7E1712740C62B00E167A1 /* Debug */,
+				7CA7E1722740C62B00E167A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CA7E1732740C62B00E167A1 /* Build configuration list for PBXNativeTarget "Easy-Signer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA7E1742740C62B00E167A1 /* Debug */,
+				7CA7E1752740C62B00E167A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CA7E15B2740C62A00E167A1 /* Project object */;
+}

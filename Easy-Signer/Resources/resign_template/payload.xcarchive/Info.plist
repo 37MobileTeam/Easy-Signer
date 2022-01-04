@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2021-12-20T09:02:26Z</date>
+	<key>Name</key>
+	<string>App 名称</string>
+	<key>SchemeName</key>
+	<string>App 名称</string>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>App路径，如:Applications/Demo.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>App Bundle ID</string>
+		<key>CFBundleShortVersionString</key>
+		<string>内置版本号</string>
+		<key>CFBundleVersion</key>
+		<string>外置版本号</string>
+		<key>SigningIdentity</key>
+		<string>证书名称</string>
+		<key>Team</key>
+		<string>Team ID</string>
+		<key>Architectures</key>
+		<array>
+			<string>armv7</string>
+			<string>arm64</string>
+		</array>
+	</dict>
+</dict>
+</plist>

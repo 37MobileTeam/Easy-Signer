@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>compileBitcode</key>
+	<false/>
+	<key>thinning</key>
+	<string>&lt;none&gt;</string>
+	<key>destination</key>
+	<string>export</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>signingCertificate</key>
+	<string>证书的名称或SHA1签名</string>
+	<key>method</key>
+	<string>证书的类型，如development或app-store</string>
+	<key>teamID</key>
+	<string>证书的Team ID</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>app或appex的Bundle ID，有多少填多少</key>
+		<string>对应的重签名的描述文件名称</string>
+	</dict>
+</dict>
+</plist>
