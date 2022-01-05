@@ -21,7 +21,7 @@ class ResignManager {
     ) throws {
         progressHandler?("\n******\n重签包体：\(ipaPath.path)\n******")
         
-        guard let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .localDomainMask).first else {
+        guard let cacheDir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             throw NSError(domain: "找不到 Caches 目录", code: -1, userInfo: nil)
         }
         
@@ -142,7 +142,7 @@ extension ResignManager {
     
     /// 解压 ipa
     private static func unzipIPA(ipaPath: URL,targetPath: URL) throws {
-        try TaskCenter.executeShell(command: "unzip \"\(ipaPath.path)\" -d \"\(targetPath.path)/\"")
+        try TaskCenter.executeShell(command: "unzip -q \"\(ipaPath.path)\" -d \"\(targetPath.path)/\"")
     }
     
     /// 删除无用文件
