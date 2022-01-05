@@ -32,9 +32,16 @@ class ResignManager {
         try FileManager.default.createDirectory(at: ipaContent, withIntermediateDirectories: true, attributes: nil)
         
         do {
-            /// 1.  解压ipa
-            progressHandler?("解压 ipa...")
-            try unzipIPA(ipaPath: ipaPath, targetPath: ipaContent)
+			if ipaPath.pathExtension == "ipa" {
+				/// 1.  解压ipa
+				progressHandler?("解压 ipa...")
+				try unzipIPA(ipaPath: ipaPath, targetPath: ipaContent)
+			} else if ipaPath.pathExtension == "app" {
+				progressHandler?("复制 app...")
+				let payload = ipaContent.appendingPathComponent("Payload")
+				try FileManager.default.createDirectory(at: payload, withIntermediateDirectories: true, attributes: nil)
+				try FileManager.default.copyItem(at: ipaPath, to: payload.appendingPathComponent(ipaPath.lastPathComponent))
+			}
 
             /// 2.  删除包内无用内容
             progressHandler?("删除包内无用内容...")
@@ -74,7 +81,11 @@ class ResignManager {
             let exportOptionsPlist = templatePath.appendingPathComponent("ExportOptions.plist")
             
             /// 复制 app 到 xcarchive 内
-            try FileManager.default.copyItem(at: appPath, to: xcarchivePath.appendingPathComponent("Products/Applications/\(appName)"))
+			let xcarchiveAppDir = xcarchivePath.appendingPathComponent("Products/Applications")
+			if !FileManager.default.fileExists(atPath: xcarchiveAppDir.path) {
+				try FileManager.default.createDirectory(at: xcarchiveAppDir, withIntermediateDirectories: true, attributes: nil)
+			}
+            try FileManager.default.copyItem(at: appPath, to: xcarchiveAppDir.appendingPathComponent(appName))
             
             /// 更新 xcarchive Info.plist
             updatePlist(url: xcarchiveInfoPlist) { info in
@@ -179,14 +190,6 @@ extension ResignManager {
     
     private static func moveIpa(exportPath: URL, outputPath: URL) throws {
         try TaskCenter.executeShell(command: "find -d \"\(exportPath.path)\" -maxdepth 1 -name \"*.ipa\" | xargs -I {} mv -f {} \"\(outputPath.path)/\"")
-    }
-    
-    private static func updateAppInfoPlist(appPath: URL) {
-        
-    }
-    
-    private static func updateXcarchiveInfoPlist() {
-        
     }
     
     private static func xcodebuildExportArchive(xcarchivePath: URL, exportPath: URL, exportOptionsPlist: URL) throws {

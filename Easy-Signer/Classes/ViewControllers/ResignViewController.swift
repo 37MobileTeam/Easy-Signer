@@ -30,7 +30,7 @@ class ResignViewController: BaseViewController {
         certificates = ResignManager.getCertificates()
         profiles = Profile.getProfiles()
         
-        let ipaTitle = NSTextField(labelWithString: "选择 ipa:")
+        let ipaTitle = NSTextField(labelWithString: "选择包体:")
         ipaTitle.isEditable = false
         ipaTitle.alignment = .right
         view.addSubview(ipaTitle)
@@ -40,7 +40,7 @@ class ResignViewController: BaseViewController {
             make.top.equalToSuperview().offset(20)
         }
         
-        ipaPathInput.placeholderString = "ipa路径"
+        ipaPathInput.placeholderString = "ipa或app路径"
         view.addSubview(ipaPathInput)
         ipaPathInput.snp.makeConstraints { make in
             make.centerY.equalTo(ipaTitle)
@@ -202,8 +202,8 @@ extension ResignViewController {
         
         let ipaPath = URL(fileURLWithPath: ipaPathInput.stringValue)
         let outputPath = URL(fileURLWithPath: exportPathInput.stringValue)
-        guard ipaPath.pathExtension == "ipa" else {
-            HUD.alert("只支持重签ipa文件")
+		guard ipaPath.pathExtension == "ipa" || ipaPath.pathExtension == "app" else {
+            HUD.alert("只支持重签ipa和app文件")
             return
         }
         HUD.showLoading(view)
