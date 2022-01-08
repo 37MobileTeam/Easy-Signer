@@ -15,6 +15,8 @@
 		7C4FBA6D276F7CE2001F89B2 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 7C4FBA6C276F7CE2001F89B2 /* Resources */; };
 		7C4FBA6F2770B12D001F89B2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FBA6E2770B12D001F89B2 /* Profile.swift */; };
 		7C86373027893F6C006F7AF2 /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86372F27893F6C006F7AF2 /* Certificate.swift */; };
+		7C86373127896969006F7AF2 /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCF758B278886960018B230 /* OpenSSL.xcframework */; };
+		7C86373227896969006F7AF2 /* OpenSSL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCF758B278886960018B230 /* OpenSSL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7CA7E1672740C62A00E167A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1662740C62A00E167A1 /* AppDelegate.swift */; };
 		7CA7E16B2740C62B00E167A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CA7E16A2740C62B00E167A1 /* Assets.xcassets */; };
 		7CA7E1792740C7CA00E167A1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1782740C7CA00E167A1 /* main.swift */; };
@@ -23,9 +25,22 @@
 		7CA7E1872740CA5100E167A1 /* ResignWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1862740CA5100E167A1 /* ResignWindow.swift */; };
 		7CA7E1892740CBB900E167A1 /* ResignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E1882740CBB900E167A1 /* ResignViewController.swift */; };
 		7CB8FD942778BCAC006514E4 /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8FD932778BCAC006514E4 /* LoggerView.swift */; };
-		7CCF758C278886960018B230 /* OpenSSL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCF758B278886960018B230 /* OpenSSL.xcframework */; };
 		7CCF79E72788A17A0018B230 /* X509.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF79E62788A17A0018B230 /* X509.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C86373327896969006F7AF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C86373227896969006F7AF2 /* OpenSSL.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		193737736E4788E8AA54FF89 /* Pods-Easy-Signer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy-Signer.debug.xcconfig"; path = "Target Support Files/Pods-Easy-Signer/Pods-Easy-Signer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CCF758C278886960018B230 /* OpenSSL.xcframework in Frameworks */,
+				7C86373127896969006F7AF2 /* OpenSSL.xcframework in Frameworks */,
 				16F26A70174CDD949E4E7295 /* Pods_Easy_Signer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +218,7 @@
 				7CA7E1602740C62A00E167A1 /* Frameworks */,
 				7CA7E1612740C62A00E167A1 /* Resources */,
 				80A600F88FB01764D1CDE4F7 /* [CP] Embed Pods Frameworks */,
+				7C86373327896969006F7AF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
