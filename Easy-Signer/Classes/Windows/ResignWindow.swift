@@ -10,7 +10,7 @@ import Cocoa
 class ResignWindow: BaseWindow {
     init() {
         super.init(contentRect:CGRect.zero, styleMask: [.miniaturizable, .closable, .titled], backing: .buffered, defer: false)
-        title = "重签助手"
+        title = "Easy Signer"
         contentViewController = ResignViewController()
     }
 	

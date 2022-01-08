@@ -7,10 +7,11 @@
 
 import Cocoa
 import SnapKit
+import OpenSSL
 
 
 class ResignViewController: BaseViewController {
-    var certificates: [String] = []
+    var certificates: [Certificate] = []
     var profiles: [Profile] = []
     
     let ipaPathInput = NSTextField()
@@ -27,7 +28,7 @@ class ResignViewController: BaseViewController {
 	}
 	
 	override func viewDidLoad() {
-        certificates = ResignManager.getCertificates()
+        certificates = Certificate.getCertificates()
         profiles = Profile.getProfiles()
         
         let ipaTitle = NSTextField(labelWithString: "选择包体:")
@@ -92,7 +93,7 @@ class ResignViewController: BaseViewController {
         
         let certPopMenu = NSMenu()
         certificates.forEach { cert in
-            certPopMenu.addItem(withTitle: cert, action: nil, keyEquivalent: "")
+            certPopMenu.addItem(withTitle: cert.name, action: nil, keyEquivalent: "")
         }
         certPopBtn.menu = certPopMenu
         view.addSubview(certPopBtn)
@@ -114,8 +115,10 @@ class ResignViewController: BaseViewController {
         
 
         let profilePopMenu = NSMenu()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         profiles.forEach { profile in
-            profilePopMenu.addItem(withTitle: "\(profile.name)(\(profile.applicationIdentifier))", action: nil, keyEquivalent: "")
+            profilePopMenu.addItem(withTitle: "\(profile.name)(\(profile.applicationIdentifier)) - Expired: \(dateFormatter.string(from: profile.expirationDate))", action: nil, keyEquivalent: "")
         }
         profilePopBtn.menu = profilePopMenu
         view.addSubview(profilePopBtn)
@@ -206,12 +209,18 @@ extension ResignViewController {
             HUD.alert("只支持重签ipa和app文件")
             return
         }
+        guard profile.certs.map({ $0.sha1 }).contains(where: { $0 == cert.sha1 }) else {
+            HUD.alert("证书和描述文件不匹配")
+            return
+        }
+        
         HUD.showLoading(view)
         DispatchQueue.global().async {
             do {
-                try ResignManager.start(ipaPath:ipaPath, certificate: cert, profile: profile,exportType: exportType, outputPath: outputPath ,progressHandler: { text in
+                try ResignManager.start(ipaPath:ipaPath, certificate: cert.name, profile: profile,exportType: exportType, outputPath: outputPath ,progressHandler: { text in
                     self.loggerView.addLogString(text)
                 })
+                HUD.alert("重签名完成🎉🎉🎉")
             } catch {
                 self.loggerView.addLogString("**重签名失败❌**\n\(error.localizedDescription)")
                 HUD.alert(error.localizedDescription)

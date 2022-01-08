@@ -14,6 +14,7 @@ struct Profile {
     let createDate: Date
     let expirationDate: Date
     let applicationIdentifier: String
+    let certs: [X509]
     
     static func getProfiles() -> [Profile] {
         let fileManager = FileManager()
@@ -47,6 +48,8 @@ struct Profile {
         self.teamId = (data["TeamIdentifier"] as? [String])?.first ?? ""
         self.createDate = data["CreationDate"] as! Date
         self.expirationDate = data["ExpirationDate"] as! Date
+        let certs = data["DeveloperCertificates"] as! [Data]
+        self.certs = certs.compactMap { X509(data: $0, type: .der) }
         
         let entitlements = data["Entitlements"] as? [String: Any] ?? [:]
         let fullApplicationIdentifier = entitlements["application-identifier"] as? String ?? ""

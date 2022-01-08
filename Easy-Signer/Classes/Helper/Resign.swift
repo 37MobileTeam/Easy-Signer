@@ -122,26 +122,13 @@ class ResignManager {
             try xcodebuildExportArchive(xcarchivePath: xcarchivePath, exportPath: exportPath, exportOptionsPlist: exportOptionsPlist)
             progressHandler?("重签完成🎉🎉🎉")
             try moveIpa(exportPath: exportPath, outputPath: outputPath)
+            progressHandler?("包体路径：\(outputPath.appendingPathComponent(appName.components(separatedBy: ".").first! + ".ipa").path)")
             try? FileManager.default.removeItem(at: workspace)
         } catch {
             print(error)
             try? FileManager.default.removeItem(at: workspace)
             throw error
         }
-    }
-    
-    /// 获取本地已安装的证书
-    static func getCertificates() -> [String] {
-        if let result = try? TaskCenter.executeShell(command: "security find-identity -v -p codesigning"),
-            let re = try? NSRegularExpression(pattern: "\".+\"", options: .allowCommentsAndWhitespace) {
-            return result.output.components(separatedBy: "\n").map{
-                if let result = re.firstMatch(in: $0, range: NSRange(location: 0, length: $0.count)) {
-                    return NSString(string: $0).substring(with: result.range).replacingOccurrences(of: "\"", with: "")
-                }
-                return ""
-            }.filter { !$0.isEmpty }
-        }
-        return []
     }
 }
 
